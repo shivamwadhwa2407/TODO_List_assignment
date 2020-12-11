@@ -13,7 +13,7 @@ const ObjectID = require("mongodb").ObjectID;
 app.get('/get-todo-list/:userId', (req,res) => {
     
     let userId = new ObjectID(req.params.userId);
-    todoListModel.find({ userId: userId}).sort({status:-1}).then( data => {
+    todoListModel.find({ userId: userId}).sort({updatedOn:-1}).then( data => {
         if (data && data.length > 0 ) {
             return res.status(200).json({
                 status: 200,
@@ -79,12 +79,18 @@ app.delete('/deleteFrom-todo-list/:id', (req, res) => {
 
 app.post('/updateFrom-todo-list', (req, res) => {
     let _id = new ObjectID( req.body.id);
-    let obj = {
-        description: req.body.description,
-        updatedOn: new Date().toISOString(),
-        status: req.body.status,
-        statusDescription: req.body.statusDescription
+    
+    let obj = {}
+    if (req.body.description) {
+        obj['description'] = req.body.description
+    } 
+    if (req.body.status){
+        obj['status'] = req.body.status == 2 || req.body.status == 1 || req.body.status == 0 ? req.body.status : 0
     }
+    if (req.body.statusDescription) {
+        obj['statusDescription']= obj['status'] == 2 ? "Completed" : obj['status'] == 1 ? "In-Progress" : obj['status'] == 0 ? "To-Do" : req.body.statusDescription;
+    }
+    obj["updatedOn"] = new Date();
     
     todoListModel.update( {
         "_id": _id
