@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "d0833cf8-ddd9-4e88-9695-75e6aff450c0",
+		"name": "TODO LIST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8082/todo-list/get-todo-list/5fb3fb7e9020bb65cc8cc01a",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/todo-list/get-todo-list/5fb3fb7e9020bb65cc8cc01a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"todo-list",
+						"get-todo-list",
+						"5fb3fb7e9020bb65cc8cc01a"
+					]
+				},
+				"description": "Get API which takes userID and fetches its TODO List"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8082/todo-list/get-todo-list/5fb3fb7e9020bb65cc8cc01a",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/todo-list/get-todo-list/5fb3fb7e9020bb65cc8cc01a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"todo-list",
+								"get-todo-list",
+								"5fb3fb7e9020bb65cc8cc01a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,Refresh-Access-Token,Accept, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,xAccessToken,Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "711"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c7-gJt/j8SIRG61qUK/EMWPejtQRfs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Dec 2020 13:50:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"status\": 1,\n        \"statusDescription\": \"In-Progress\",\n        \"_id\": \"5fd36b6d0c6db620b8b89f00\",\n        \"userId\": \"5fb3fb7e9020bb65cc8cc01a\",\n        \"description\": \"New Description\",\n        \"createdOn\": \"2020-12-11T12:51:57.498Z\",\n        \"updatedOn\": \"2020-12-11T13:29:48.128Z\",\n        \"__v\": 0\n    },\n    {\n        \"status\": 0,\n        \"statusDescription\": \"To-Do\",\n        \"_id\": \"5fd36c29d5e1ce083c413049\",\n        \"userId\": \"5fb3fb7e9020bb65cc8cc01a\",\n        \"description\": \"completed the demo project !!!\",\n        \"createdOn\": \"2020-12-11T12:55:05.633Z\",\n        \"updatedOn\": \"2020-12-11T12:55:05.633Z\",\n        \"__v\": 0\n    },\n    {\n        \"status\": 0,\n        \"statusDescription\": \"To-Do\",\n        \"_id\": \"5fd36cb3d5e1ce083c41304a\",\n        \"userId\": \"5fb3fb7e9020bb65cc8cc01a\",\n        \"description\": \"some description !!!\",\n        \"createdOn\": \"2020-12-11T12:57:23.580Z\",\n        \"updatedOn\": \"2020-12-11T12:57:23.580Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8082/todo-list/addto-todo-list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"5fb3fb7e9020bb65cc8cc01a\",\r\n    \"description\" : \"Some Description !!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/todo-list/addto-todo-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"todo-list",
+						"addto-todo-list"
+					]
+				},
+				"description": "Add List Item to the data base, corresponding to a particular user,  \r\n{\r\n    userID : \"User ID of the user, (_id of loginModel),\r\n    description: \"Description of the List Item\"\r\n}"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8082/todo-list/addto-todo-list",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"5fb3fb7e9020bb65cc8cc01a\",\r\n    \"description\" : \"Some Description !!!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/todo-list/addto-todo-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"todo-list",
+								"addto-todo-list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,Refresh-Access-Token,Accept, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,xAccessToken,Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-hgMYDIBjSHOAdxgW5Fdg2yc6jUU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Dec 2020 17:09:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\"\n}"
+				},
+				{
+					"name": "http://localhost:8082/todo-list/addto-todo-list",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"5fb3fb7e9020bb65cc8cc01a\",\r\n    \"description\" : \"Some Description !!!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/todo-list/addto-todo-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"todo-list",
+								"addto-todo-list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,Refresh-Access-Token,Accept, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,xAccessToken,Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-hgMYDIBjSHOAdxgW5Fdg2yc6jUU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Dec 2020 17:09:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8082/todo-list/deleteFrom-todo-list/5fd36b260c6db620b8b89eff",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/todo-list/deleteFrom-todo-list/5fd3a9835189fc31f464fec9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"todo-list",
+						"deleteFrom-todo-list",
+						"5fd3a9835189fc31f464fec9"
+					]
+				},
+				"description": "DELETE API , to delete the List Item from the Collection .\r\nIt takse List Item's _id as a parameter"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8082/todo-list/deleteFrom-todo-list/5fd36b260c6db620b8b89eff",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/todo-list/deleteFrom-todo-list/5fd3a9835189fc31f464fec9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"todo-list",
+								"deleteFrom-todo-list",
+								"5fd3a9835189fc31f464fec9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,Refresh-Access-Token,Accept, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,xAccessToken,Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "285"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11d-kzMO5yDPUC6iCpotoIgJzClqI6M\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Dec 2020 18:05:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Record Delete\",\n    \"data\": {\n        \"status\": 0,\n        \"statusDescription\": \"To-Do\",\n        \"_id\": \"5fd3a9835189fc31f464fec9\",\n        \"userId\": \"5fb3fb7e9020bb65cc8cc01a\",\n        \"description\": \"this is a new description\",\n        \"createdOn\": \"2020-12-11T17:16:51.329Z\",\n        \"updatedOn\": \"2020-12-11T17:16:51.329Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "http://localhost:8082/todo-list/deleteFrom-todo-list/5fd36b260c6db620b8b89eff",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/todo-list/deleteFrom-todo-list/5fd3a9835189fc31f464fec9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"todo-list",
+								"deleteFrom-todo-list",
+								"5fd3a9835189fc31f464fec9"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,Refresh-Access-Token,Accept, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,xAccessToken,Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d-MVX5iAsS/Oj7DjnK+lY8eaZCV6c\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Dec 2020 18:09:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 404,\n    \"message\": \"No LIST ITEM FOUND\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8082/todo-list/updateFrom-todo-list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"5fd3a7b55b36463c686a6870\",\r\n    \"description\": \"New Description\",\r\n    \"status\": 1,\r\n    \"statusDescription\": \"In-Progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/todo-list/updateFrom-todo-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"todo-list",
+						"updateFrom-todo-list"
+					]
+				},
+				"description": "Update API to update a particular List Item , it is a post api , which takes \r\n{\r\n    id: _id of List Item\r\n    description : new description of the list item,\r\n    status : status of list item (0-> Todo,1 -> In Progress -,2 -> Completed),\r\n    statusDescription : Staus Description (TODO, In-Progress, Completed)\r\n}"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8082/todo-list/updateFrom-todo-list",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"5fd3a7b55b36463c686a6870\",\r\n    \"description\": \"New Description\",\r\n    \"status\": 1,\r\n    \"statusDescription\": \"In-Progress\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/todo-list/updateFrom-todo-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"todo-list",
+								"updateFrom-todo-list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,Refresh-Access-Token,Accept, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,xAccessToken,Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-AqxOVsulLtuWea0rKs+57E6Sppc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Dec 2020 18:07:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"List Item Updated\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8082/todo-login/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"shivamwadhwa07@gmail.com\",\r\n    \"password\":\"DemoPassword@007\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/todo-login/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"todo-login",
+						"login"
+					]
+				},
+				"description": "Login API to enter the platform ,\r\n{\r\n    email: email, \r\n    password : password\r\n}"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8082/todo-login/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shivamwadhwa07@gmail.com\",\r\n    \"password\":\"DemoPassword@007\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/todo-login/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"todo-login",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,Refresh-Access-Token,Accept, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,xAccessToken,Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "277"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"115-GSUz4DV+BO1NaIAA+M+iTma5wGA\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Dec 2020 18:07:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"results\": {\n        \"_id\": \"5fb3fb7e9020bb65cc8cc01a\",\n        \"email\": \"shivamwadhwa07@gmail.com\",\n        \"password\": \"DemoPassword@007\",\n        \"name\": \"Shivam Wadhwa\",\n        \"phone\": 9560998128,\n        \"username\": \"Iam.Waddy\",\n        \"address\": \"Street No 007, Milan Italy\",\n        \"pincode\": \"007\",\n        \"city\": \"milan\",\n        \"country\": \"italy\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -36,7 +36,7 @@ app.get('/get-todo-list/:userId', (req,res) => {
 })
 
 app.post('/addto-todo-list', (req, res) => {
-    console.log("HERE")
+    // console.log("HERE")
     let userId = new ObjectID(req.body.userId);
     console.log(typeof(userId))
     let obj = {
@@ -65,6 +65,13 @@ app.delete('/deleteFrom-todo-list/:id', (req, res) => {
                 message: "Record Delete",
                 data: data
             })   
+        } else {
+            return res.status(404).json(
+                {
+                    status: 404,
+                    message: "No LIST ITEM FOUND"
+                }
+            )
         }
     }).catch(err => res.status(500))
 
@@ -84,7 +91,6 @@ app.post('/updateFrom-todo-list', (req, res) => {
     }, { 
         $set: obj
     }).then( data => {
-        console.log(data);
         return res.status(200).json({
             status: 200,
             message: "List Item Updated",
